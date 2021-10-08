@@ -25,6 +25,7 @@ class ContactosController < ApplicationController
 
     respond_to do |format|
       if @contacto.save
+        UserMailer.with(correo: @contacto.correo).prueba_email.deliver_now
         format.html { redirect_to @contacto, notice: "Contacto creado." }
         format.json { render :show, status: :created, location: @contacto }
       else
