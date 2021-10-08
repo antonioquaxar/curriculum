@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi Curriculum</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <style>
+
+  h2 {
+    text-align:center;
+    }
+  img{ 
+    border-width: 2px
+    border-style: solid;
+    border: solid black 5px ;
+      }
+
+  #principal{
+    border: solid 7px black;
+    width: 80%
+    margin: 0 auto ;
+    padding: 10px;
+  }
+  legend{
+    border: solid 2px black;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #9BE2F9;
+  }
+  body{
+    background: url(fondo2.jpg);
+    background-size: 100%; 
+  }
+  div{
+    border-width: 1px
+    border-style: solid;
+    border: solid black 1px ;
+    padding: 1px;
+  }
+  </style>
+    <%= yield %>
+  </body>
+</html>
